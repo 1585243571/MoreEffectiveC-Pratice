@@ -27,4 +27,34 @@
     }
     ```
 
-  - 
+- __add genrate function  by macro__:
+
+  ```c++
+  /*************************************************************************
+  	> File Name: 1.cpp
+  	> Author: zhangning
+  	> Mail: amoscykl@163.com 
+  	> Created Time: 2020年04月26日 星期日 15时42分02秒
+   ************************************************************************/
+  
+  #include <string>
+  #include<iostream>
+  using namespace std;
+  
+  #define TEST_TMP(name) \
+  	void print_##name(){  \
+  		cout<<#name<<endl; \
+  	}
+  
+  #define  TEST(name) TEST_TMP(name)
+  
+  
+  TEST(zhangning)
+  int main()
+  {
+  	print_zhangning();
+  
+  }
+  ```
+
+  
